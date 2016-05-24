@@ -134,7 +134,13 @@
 
             this.newBlock('ellipse');
             this.newBlock();
+            this.newBlock();
+            this.newBlock();
+            this.newBlock();
             this.connectBlocks(this.blocks[0], this.blocks[1]);
+            this.connectBlocks(this.blocks[1], this.blocks[2]);
+            this.connectBlocks(this.blocks[1], this.blocks[3]);
+            this.connectBlocks(this.blocks[1], this.blocks[4]);
         }
 
         ChainTools.prototype.buildDisplay = function() {
@@ -224,6 +230,8 @@
             this.blocks[this.blocks.counter] = block;
             this.blocks.counter++;
         }
+
+
 
         ChainTools.prototype.connectBlocks = function(a, b) {
             var connection = this.r.connection(a, b, "#333", "#0f1|5");
